@@ -45,3 +45,19 @@ SELECT `job_ID`, `job_dept`, `job_name`, `job_description`, `salary_range` FROM 
 INSERT INTO `employee_manage`.`tbl_jobdepartment` (`job_ID`, `job_dept`, `job_name`, `job_description`, `salary_range`) VALUES ('204', 'CEO', 'CEO', 'CEO', '10000000');
 SELECT `job_ID`, `job_dept`, `job_name`, `job_description`, `salary_range` FROM `employee_manage`.`tbl_jobdepartment` WHERE  `job_ID`=204;
 *************************************************************************************************************************************************************************
+Table : tbl_Salary_or_Bonus
+Query:
+SELECT * FROM `employee_manage`.`tbl_salary_or_bonus` ORDER BY `amount` ASC LIMIT 1000;
+SELECT `job_ID`, LEFT(`job_dept`, 256) FROM `employee_manage`.`tbl_jobdepartment` GROUP BY `job_ID`, `job_dept` ORDER BY `job_dept` LIMIT 10000;
+INSERT INTO `employee_manage`.`tbl_salary_or_bonus` (`salary_ID`, `job_ID`, `amount`, `annual`, `bonus`) VALUES ('501', '204', '100000', '2020-01-10', '2022-09-10');
+SELECT `salary_ID`, `job_ID`, `amount`, `annual`, `bonus` FROM `employee_manage`.`tbl_salary_or_bonus` WHERE  `salary_ID`=501;
+SELECT `job_ID`, LEFT(`job_dept`, 256) FROM `employee_manage`.`tbl_jobdepartment` GROUP BY `job_ID`, `job_dept` ORDER BY `job_dept` LIMIT 10000;
+INSERT INTO `employee_manage`.`tbl_salary_or_bonus` (`salary_ID`, `job_ID`, `amount`, `annual`, `bonus`) VALUES ('502', '201', '2100', '2021-09-14', '2022-09-10');
+SELECT `salary_ID`, `job_ID`, `amount`, `annual`, `bonus` FROM `employee_manage`.`tbl_salary_or_bonus` WHERE  `salary_ID`=502;
+SELECT `job_ID`, LEFT(`job_dept`, 256) FROM `employee_manage`.`tbl_jobdepartment` GROUP BY `job_ID`, `job_dept` ORDER BY `job_dept` LIMIT 10000;
+/* #50: Access violation at address 0000005082B00000 in module 'heidisql.exe'. Execution of address 0000005082B00000 Message CharCode:13 Msg:256 */
+INSERT INTO `employee_manage`.`tbl_salary_or_bonus` (`salary_ID`, `job_ID`, `amount`, `annual`, `bonus`) VALUES ('503', '202', '5000', '2021-09-14', '2022-09-10');
+SELECT `salary_ID`, `job_ID`, `amount`, `annual`, `bonus` FROM `employee_manage`.`tbl_salary_or_bonus` WHERE  `salary_ID`=503;
+SELECT `job_ID`, LEFT(`job_dept`, 256) FROM `employee_manage`.`tbl_jobdepartment` GROUP BY `job_ID`, `job_dept` ORDER BY `job_dept` LIMIT 10000;
+INSERT INTO `employee_manage`.`tbl_salary_or_bonus` (`salary_ID`, `job_ID`, `amount`, `annual`, `bonus`) VALUES ('504', '203', '10000', '2021-19-25', '2020-09-10');
+SELECT `salary_ID`, `job_ID`, `amount`, `annual`, `bonus` FROM `employee_manage`.`tbl_salary_or_bonus` WHERE  `salary_ID`=504;tbl_employee

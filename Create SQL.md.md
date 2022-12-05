@@ -30,3 +30,11 @@ CREATE TABLE tbl_Salary_or_Bonus(salary_ID  INT(11) PRIMARY KEY,
 											bonus DATE,
 											FOREIGN KEY (job_ID) REFERENCES tbl_JobDepartment(job_ID)
 											);	
+Table : tbl_Salary_or_Bonus
+Query:
+CREATE Table tbl_Qualification(qual_ID  INT(11) PRIMARY KEY,
+								emp_ID INT(11),
+								position VARCHAR(30) NOT NULL,
+								requirements VARCHAR(30), 
+								date_in DATE,
+								FOREIGN KEY (emp_ID) REFERENCES tbl_Employee(emp_ID));

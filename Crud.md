@@ -22,3 +22,15 @@ Table attribute:1. admin_ID PK
                 6. contact_address
                 7. admin_email
                 8. admin_pass
+Table : tbl_JobDepartment
+Table attribute:1. job_ID PK
+                2. job_dept
+                3. job_name
+                4. job_description
+                5. salary_range
+Table : tbl_Salary_or_Bonus
+Table attribute:1. salary_ID PK
+                2. job_ID FK
+                3. amount
+                4. annual
+                5. bonus
